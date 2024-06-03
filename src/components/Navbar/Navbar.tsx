@@ -11,7 +11,7 @@ export const Navbar = ({ isTop }: NavbarProps) => {
       <Link
         href={href}
         onClick={() => onClick(href.replace('#', ''))}
-        className={`py-4 px-7 hover:text-white w-full backdrop-blur-sm ${position === href.replace('#', '') && !isTop && 'bg-neutral-300/[0.2] rounded-full w-full'}`}
+        className={`py-2 px-3 sm:py-4 sm:px-7 text-sm hover:text-white w-full backdrop-blur-sm ${position === href.replace('#', '') && !isTop && 'bg-neutral-300/[0.2] rounded-full w-full'}`}
       >
         {title}
       </Link>

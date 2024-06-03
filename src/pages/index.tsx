@@ -1,4 +1,5 @@
 import { Navbar } from '@components/Navbar';
+import { HomeSection } from '@components/Section/HomeSection';
 import { Inter } from 'next/font/google';
 import { useCallback, useEffect, useState } from 'react';
 
@@ -18,15 +19,16 @@ export default function Home() {
     return () => {
       window.removeEventListener('scroll', onScroll);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
     <div
-      className={`flex min-h-screen h-[5000px] flex-col items-center justify-between p-7 ${inter.className}`}
+      className={`flex min-h-screen w-full flex-col items-center justify-between p-7 ${inter.className}`}
     >
       <Navbar isTop={isTop} />
-      <div id="home" className="mt-[1000px]">
-        Home
+      <div className="mt-10">
+        <HomeSection />
       </div>
     </div>
   );
