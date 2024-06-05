@@ -46,10 +46,10 @@ export const Navbar = () => {
   }, []);
 
   return (
-    <div className="fixed top-7 left-0 right-0 flex justify-center">
+    <div className="fixed top-7 left-0 right-0 flex justify-center z-50">
       <nav
-        className={`flex relative sm:gap-3 rounded-full p-2 backdrop-blur ${
-          isTop === 0 ? '' : 'bg-blue-400/[.2]'
+        className={`flex relative rounded-full p-2 backdrop-blur ${
+          isTop === 0 ? '' : 'bg-blue-400/[0.2]'
         }`}
       >
         {navItems.map((item) => {
