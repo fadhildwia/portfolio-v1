@@ -1,43 +1,14 @@
+import { aboutData, experienceItems, skillItems } from 'constant/aboutData';
 import React from 'react';
 
-const skillItems = [
-  'React',
-  'React Native',
-  'Next.js',
-  'JavaScript',
-  'TypeScript',
-  'HTML',
-  'CSS',
-  'Sass',
-  'Tailwind',
-  'Material-UI',
-  'Git',
-  'Framer Motion',
-  'Styled-Components',
-  'Vue.js',
-  'Svelte.js',
-  'Express.js',
-  'Firebase',
-  'Jest',
-  'Scrum',
-  'Node.js',
-  'Nuxt.js',
-  'Postman'
-];
+import { LinkIcon } from '../../public/icons';
 
 export const AboutSection = () => {
   return (
-    <div id="about" className="flex flex-col gap-40">
+    <div id="about" className="flex flex-col gap-32 mb-32">
       <div className="flex flex-col gap-4">
         <h1 className="text-2xl font-semibold">About</h1>
-        <p className="font-light text-zinc-400">
-          I am an experienced front-end developer with 3+ years of experience. I specialize in
-          designing and developing visually appealing and responsive user interfaces. Throughout my
-          career, I have successfully collaborated with teams to deliver innovative and user-focused
-          solutions. I have a strong ability to learn quickly and I am always seeking opportunities
-          to deepen my knowledge and improve my IT skills. I am ready to leverage my technical
-          expertise to benefit others and organizations
-        </p>
+        <p className="font-light text-zinc-400">{aboutData}</p>
       </div>
       <div className="flex flex-col gap-4">
         <h1 className="text-2xl font-semibold">Skills</h1>
@@ -50,8 +21,35 @@ export const AboutSection = () => {
         </div>
       </div>
       <div className="flex flex-col gap-4">
-        <h1 className="text-2xl font-semibold">Experience</h1>
-        <div className="flex font-light text-sm text-[#bbb] gap-2 flex-wrap"></div>
+        <h1 className="text-2xl font-semibold mb-5">Experience</h1>
+        {experienceItems.map((item, index) => (
+          <div
+            key={index}
+            className="flex flex-1 font-light text-sm text-[#bbb] flex-wrap sm:flex-nowrap gap-2"
+          >
+            <div className="w-56">{item.date}</div>
+            <div className="flex flex-col gap-2">
+              <div className="flex items-center gap-2">
+                <div className="text-[#EDEDED] font-semibold">{item.companyName}</div>
+                <div onClick={() => {}}>
+                  <LinkIcon className="fill-blue-400" />
+                </div>
+              </div>
+              <div className="text-[#EDEDED] font-semibold">{item.jobTitle}</div>
+              <div className="my-1">{item.description}</div>
+              <div className="flex items-center flex-wrap gap-2">
+                {item.tech.map((techItem, techIndex) => (
+                  <div
+                    key={techIndex}
+                    className="px-[6px] py-[4px] border border-1 border-blue-400 shadow text-blue-400"
+                  >
+                    {techItem}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );
