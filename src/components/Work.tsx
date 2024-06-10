@@ -41,7 +41,7 @@ const Card = ({ github, link, title, stack }: CardProps) => {
 
 export const Work = () => {
   return (
-    <div id="work">
+    <div id="work" className="mb-32">
       <h1 className="text-2xl font-semibold">Projects</h1>
       <div className="grid grid-cols-fr sm:grid-cols-2 gap-2 mt-8">
         {projectItems.map((item, index) => (

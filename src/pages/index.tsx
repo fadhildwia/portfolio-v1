@@ -1,6 +1,7 @@
 import { AboutSection } from '@components/AboutSection';
 import { HomeSection } from '@components/HomeSection';
 import { Work } from '@components/Work';
+import { Writing } from '@components/Writing';
 import Head from 'next/head';
 import Image from 'next/image';
 
@@ -15,6 +16,7 @@ export default function Home() {
       <HomeSection />
       <AboutSection />
       <Work />
+      <Writing />
     </div>
   );
 }
