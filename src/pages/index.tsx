@@ -1,4 +1,5 @@
 import { AboutSection } from '@components/AboutSection';
+import { Footer } from '@components/Footer';
 import { HomeSection } from '@components/HomeSection';
 import { Work } from '@components/Work';
 import { Writing } from '@components/Writing';
@@ -17,6 +18,7 @@ export default function Home() {
       <AboutSection />
       <Work />
       <Writing />
+      <Footer />
     </div>
   );
 }
