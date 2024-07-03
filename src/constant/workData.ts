@@ -6,9 +6,9 @@ export const projectItems = [
     stack: ['React', 'Three.js', 'Email.js', 'Tailwind']
   },
   {
-    github: 'https://github.com/fadhildwia/messenger-clone-next',
-    link: 'https://messenger-clone-fadhil.vercel.app/',
-    title: 'Messenger Clone',
-    stack: ['Next.js', 'Prisma', 'MongoDb', 'Pusher']
+    github: 'https://github.com/fadhildwia/gym-app-landingpage-svelte',
+    link: 'https://gym-app-landingpage-svelte.vercel.app/',
+    title: 'Gym App Landing Page',
+    stack: ['Svelve', 'Tailwindcss']
   }
 ];
